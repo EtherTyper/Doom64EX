@@ -113,7 +113,9 @@ if (NOT USE_CONAN)
   find_package(ZLIB REQUIRED)
 
   # libpng
-  find_package(PNG REQUIRED)
+  # find_package(PNG REQUIRED)
+  SET(PNG_INCLUDE_DIR "/usr/local/opt/libpng/include")
+  SET(PNG_LIBRARIES "/usr/local/opt/libpng/lib/libpng.dylib" "libz.dylib")
 
   # FluidSynth
   if (ENABLE_SYSTEM_FLUIDSYNTH)
